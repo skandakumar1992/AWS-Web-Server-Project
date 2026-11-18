@@ -24,56 +24,35 @@ Upload project source code to GitHub.
 Deploy the website using Netlify.
 3. Technologies and Services Used
 
-Technology
+Technology- Purpose
 
-Purpose
+AWS IAM- Identity and access management
 
-AWS IAM
+Amazon EC2- Virtual server hosting
 
-Identity and access management
+Security Groups- Network access control
 
-Amazon EC2
+Linux- Server operating system
 
-Virtual server hosting
+Apache- Web server
 
-Security Groups
+HTML- Website structure
 
-Network access control
+CSS- Website styling
 
-Linux
+Git- Version control
 
-Server operating system
+GitHub- Source code repository
 
-Apache
+Netlify- Website hosting
 
-Web server
-
-HTML
-
-Website structure
-
-CSS
-
-Website styling
-
-Git
-
-Version control
-
-GitHub
-
-Source code repository
-
-Netlify
-
-Website hosting
 . Project Folder Structure
 
-AWS-Web-Server-Project/
-│
-├── index.html
-├── style.css
-└── README.md
+- AWS-Web-Server-Project/
+  │
+- ├── index.html
+- ├── style.css
+- └── README.md
 
 5. AWS EC2 Configuration
 
@@ -93,29 +72,9 @@ Web Server: Apache HTTP Server
 
 The following inbound rules are required:
 
-Type
-
-Protocol
-
-Port
-
-Source
-
-SSH
-
-TCP
-
-22
-
-My IP
-
-HTTP
-
-TCP
-
-80
-
-0.0.0.0/0
+Type- Protocol- Port- Source
+SSH-   TCP-      22-   My IP
+HTTP-  TCP-      80-  0.0.0.0/0
 
 Note: Restrict SSH access to your own IP address. HTTP is publicly accessible to allow visitors to access the website.
 
@@ -123,34 +82,34 @@ Note: Restrict SSH access to your own IP address. HTTP is publicly accessible to
 
 Update the Linux packages:
 
-sudo yum update -y
+- sudo yum update -y
 
 Install Apache:
 
-sudo yum install httpd -y
+- sudo yum install httpd -y
 
 Start Apache:
 
-sudo systemctl start httpd
+- sudo systemctl start httpd
 
 Enable Apache:
 
-sudo systemctl enable httpd
+- sudo systemctl enable httpd
 
 Check Apache status:
 
-sudo systemctl status httpd
+- sudo systemctl status httpd
 
 8. Website Deployment Steps
 
 Copy the website files into the Apache web directory:
 
-sudo cp index.html /var/www/html/
-sudo cp style.css /var/www/html/
+- sudo cp index.html /var/www/html/
+- sudo cp style.css /var/www/html/
 
 Restart Apache:
 
-sudo systemctl restart httpd
+- sudo systemctl restart httpd
 
 Open the website using:
 
@@ -159,6 +118,7 @@ http://YOUR-EC2-PUBLIC-IP
 9. GitHub Repository
 
 GitHub Repository:https://github.com/skandakumar1992/AWS-Web-Server-Project.
+
 10. Learning Outcomes
 
 Learned how to configure AWS IAM.
